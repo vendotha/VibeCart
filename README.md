@@ -174,7 +174,21 @@ Open: `http://localhost:5173`
 
 # 📸 Screenshots
 
-(Add product grid, cart drawer, checkout, receipt modal screenshots here.)
+* Product Grid
+  
+![Screenshot 1](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.28.38.png)
+
+* Cart Drawer
+
+![Screenshot 2](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.09.png)
+
+*  Checkout
+
+![Screenshot 3](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.33.png)
+
+* Recipt Model
+
+![Screenshot 4](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.46.png)
 
 ---
 
