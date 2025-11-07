@@ -1,0 +1,33 @@
+[
+    {
+      "id": "p1",
+      "name": "Vibe T-Shirt",
+      "price": 499,
+      "image": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": "p2",
+      "name": "Vibe Hoodie",
+      "price": 1499,
+      "image": "https://img.freepik.com/premium-vector/realistic-hoodie-mockup-illustration_23-2151796864.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": "p3",
+      "name": "Table",
+      "price": 99,
+      "image": "https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80"
+    },
+    {
+      "id": "p4",
+      "name": "Cap",
+      "price": 399,
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/023/441/715/small/white-baseball-cap-generate-ai-photo.jpg"
+    },
+    {
+      "id": "p5",
+      "name": "Socks",
+      "price": 199,
+      "image": "https://m.media-amazon.com/images/I/21WVlA9Q92L._SR290,290_.jpg"
+    }
+  ]
+  
