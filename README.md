@@ -202,16 +202,16 @@ fetch('http://localhost:4000/api/cart', {
 <div align="center">
 
 ### 🛍️ Product Grid
-![Product Grid](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.28.38.png)
+![Product Grid](https://github.com/vendotha/VibeCart/blob/images/Screenshot%202025-11-07%20at%2012.28.38.png)
 
 ### 🛒 Cart Drawer
-![Cart Drawer](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.09.png)
+![Cart Drawer](https://github.com/vendotha/VibeCart/blob/images/Screenshot%202025-11-07%20at%2012.29.09.png)
 
 ### 💳 Checkout Flow
-![Checkout](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.33.png)
+![Checkout](https://github.com/vendotha/VibeCart/blob/images/Screenshot%202025-11-07%20at%2012.29.33.png)
 
 ### 🧾 Receipt Modal
-![Receipt](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.46.png)
+![Receipt](https://github.com/vendotha/VibeCart/blob/images/Screenshot%202025-11-07%20at%2012.29.46.png)
 
 </div>
 
