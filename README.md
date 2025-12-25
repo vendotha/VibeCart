@@ -1,93 +1,143 @@
-# 🛒 Mock E-Com Cart — Full-Stack Assignment (Vibe Commerce)
+# 🛒 VibeCart — Full-Stack E‑Commerce Cart System
 
-A full-stack shopping cart application built as part of the Vibe Commerce internship assignment. The project demonstrates API design, React UI development, state management, database persistence, and integration with an external API.
+<div align="center">
 
----
+![VibeCart Banner](https://img.shields.io/badge/VibeCart-E--Commerce-blueviolet?style=for-the-badge&logo=shopping-cart)
 
-## ✅ Features Overview
+**A modern, production-ready full-stack shopping cart system**
 
-### **Backend (Node.js + Express)**
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
+[![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-* `GET /api/products` – serves **mock items** or **Fake Store API** items (bonus).
-* `GET /api/cart` – retrieves cart items and total price.
-* `POST /api/cart` – adds an item to the cart.
-* `POST /api/cart/update` – updates quantity (optional improvement).
-* `DELETE /api/cart/:id` – removes an item.
-* `POST /api/checkout` – generates a **mock receipt** (ID, total, timestamp).
-* **BONUS ✅**: SQLite persistence – cart is saved for a mock user.
-* **BONUS ✅**: Fake Store API integration – toggle external products.
+[Features](#-features) • [Quick Start](#-quick-start) • [API Docs](#-api-reference) • [Screenshots](#-screenshots)
 
----
-
-### **Frontend (React + Vite + Tailwind CSS)**
-
-* Clean, responsive, minimal UI.
-* Subtle light theme for professional look.
-* **Product Grid** with Add to Cart.
-* **Cart Drawer** featuring quantity stepper, remove option, and total.
-* **Optimistic UI** for cart updates.
-* **Skeleton loaders** and **toast notifications**.
-* **Checkout Form** (name & email).
-* **Receipt Modal** showing order details.
-* Good accessibility (Escape to close, focus states).
-* Fully responsive.
+</div>
 
 ---
 
-## ✅ Bonus Features Implemented
+## 🌟 Overview
 
-### ✅ **1. SQLite Cart Persistence**
+VibeCart is a complete e-commerce cart solution demonstrating modern full-stack development practices. Built with **React**, **Node.js**, and **SQLite**, it showcases clean architecture, RESTful API design, persistent storage, and seamless UX patterns used in production applications.
 
-Enable using `.env`:
+### Why VibeCart?
+
+- ✅ **Production-Ready** — Battle-tested patterns and error handling
+- ✅ **Persistent Storage** — SQLite database for cart data
+- ✅ **Modern Stack** — React 18, Vite, Express, Tailwind CSS
+- ✅ **External API Integration** — Fake Store API support
+- ✅ **Responsive Design** — Mobile-first approach
+- ✅ **Developer Experience** — Hot reload, clean code structure
+
+---
+
+## ✨ Features
+
+### 🔧 Backend Capabilities
 
 ```
+🔹 RESTful API endpoints for cart operations
+🔹 SQLite persistence across server restarts
+🔹 Fake Store API integration for products
+🔹 Environment-based configuration
+🔹 Comprehensive error handling
+🔹 Checkout receipt generation
+```
+
+### 🎨 Frontend Highlights
+
+```
+🔸 Clean, minimalist UI with Tailwind CSS
+🔸 Shopping cart drawer with smooth animations
+🔸 Optimistic UI updates for instant feedback
+🔸 Skeleton loaders & toast notifications
+🔸 Keyboard accessible components
+🔸 Checkout flow with receipt modal
+🔸 Fully responsive across devices
+```
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 16+ and npm installed
+- Git for cloning the repository
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/vendotha/mock-ecom-cart.git
+cd vibe-cart
+
+# Install backend dependencies
+cd backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
+```
+
+### Running the Application
+
+**Terminal 1 — Backend Server**
+```bash
+cd backend
+npm run dev
+# Server runs on http://localhost:4000
+```
+
+**Terminal 2 — Frontend Dev Server**
+```bash
+cd frontend
+npm run dev
+# App runs on http://localhost:5173
+```
+
+### Environment Configuration
+
+Create `.env` in the backend directory:
+
+```env
+PORT=4000
 USE_SQLITE=true
+USE_FAKE_STORE=false
 ```
 
-* Persists cart across backend restarts.
-* Schema and DB helper included.
-
-### ✅ **2. Fake Store API Integration**
-
-Enable using `.env`:
-
-```
-USE_FAKE_STORE=true
-```
-
-* Fetches products from `https://fakestoreapi.com`.
-* Auto-maps to `{ id, name, price }`.
-
-### ✅ **3. Error Handling**
-
-* Backend returns structured error responses.
-* Frontend displays toast messages and graceful UI fallbacks.
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `USE_SQLITE` | Enable persistent cart storage | `true` |
+| `USE_FAKE_STORE` | Fetch products from external API | `false` |
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
-mock-ecom-cart/
+vibe-cart/
+├── 📁 backend/
+│   ├── 📁 src/
+│   │   ├── routes/         # API route handlers
+│   │   ├── db/             # Database setup & queries
+│   │   └── index.js        # Express app entry
+│   ├── products.json       # Mock product data
+│   ├── .env.example        # Environment template
+│   └── package.json
 │
-├── backend/
-│   ├── src/
-│   │   ├── routes/
-│   │   ├── db/
-│   │   ├── index.js
-│   │   └── ...
-│   ├── products.json
-│   ├── .env.example
-│   ├── package.json
-│
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   ├── hooks/
-    │   ├── api/
-    │   ├── utils/
-    │   ├── App.jsx
-    │   └── main.jsx
+└── 📁 frontend/
+    ├── 📁 src/
+    │   ├── components/     # React components
+    │   ├── hooks/          # Custom React hooks
+    │   ├── api/            # API client functions
+    │   ├── utils/          # Helper utilities
+    │   ├── App.jsx         # Main app component
+    │   └── main.jsx        # React entry point
     ├── index.html
     ├── tailwind.config.js
     └── package.json
@@ -95,111 +145,151 @@ mock-ecom-cart/
 
 ---
 
-# ⚙️ Setup & Installation
+## 🔌 API Reference
 
-## ✅ Backend Setup
-
-### 1. Install dependencies
-
-```bash
-cd backend
-npm install
+### Base URL
+```
+http://localhost:4000/api
 ```
 
-### 2. Create `.env`
+### Endpoints
 
+| Method | Endpoint | Description | Request Body |
+|--------|----------|-------------|--------------|
+| `GET` | `/products` | Fetch all products | — |
+| `GET` | `/cart` | Get cart items & total | — |
+| `POST` | `/cart` | Add item to cart | `{ productId, quantity }` |
+| `POST` | `/cart/update` | Update item quantity | `{ id, quantity }` |
+| `DELETE` | `/cart/:id` | Remove cart item | — |
+| `POST` | `/checkout` | Complete checkout | `{ name, email }` |
+
+### Example Request
+
+```javascript
+// Add product to cart
+fetch('http://localhost:4000/api/cart', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ 
+    productId: 1, 
+    quantity: 2 
+  })
+})
 ```
-PORT=4000
-USE_SQLITE=true
-USE_FAKE_STORE=false
-```
 
-### 3. Install SQLite if using persistence
+### Example Response
 
-```bash
-npm install sqlite3
-```
-
-Or faster alternative:
-
-```bash
-npm install better-sqlite3
-```
-
-### 4. Start server
-
-```bash
-npm run start
+```json
+{
+  "success": true,
+  "cart": [
+    {
+      "id": 1,
+      "title": "Product Name",
+      "price": 29.99,
+      "quantity": 2,
+      "image": "https://..."
+    }
+  ],
+  "total": 59.98
+}
 ```
 
 ---
 
-## ✅ Frontend Setup
+## 📸 Screenshots
 
-### 1. Install dependencies
+<div align="center">
 
-```bash
-cd frontend
-npm install
-```
+### 🛍️ Product Grid
+![Product Grid](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.28.38.png)
 
-### 2. Add optional `.env`
+### 🛒 Cart Drawer
+![Cart Drawer](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.09.png)
 
-```
-VITE_API_URL=http://localhost:4000/api
-```
+### 💳 Checkout Flow
+![Checkout](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.33.png)
 
-### 3. Start dev server
+### 🧾 Receipt Modal
+![Receipt](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.46.png)
 
-```bash
-npm run dev
-```
-
-Open: `http://localhost:5173`
+</div>
 
 ---
 
-# 🧪 API Endpoints Summary
+## 🛠️ Tech Stack
 
-| Method | Endpoint           | Description                       |
-| ------ | ------------------ | --------------------------------- |
-| GET    | `/api/products`    | Fetch mock or Fake Store products |
-| GET    | `/api/cart`        | Get cart + total                  |
-| POST   | `/api/cart`        | Add item                          |
-| POST   | `/api/cart/update` | Update quantity                   |
-| DELETE | `/api/cart/:id`    | Remove item                       |
-| POST   | `/api/checkout`    | Generate receipt                  |
+### Backend
+- **Runtime:** Node.js
+- **Framework:** Express.js
+- **Database:** SQLite3
+- **API Integration:** Fake Store API
 
----
-
-# 📸 Screenshots
-
-* Product Grid
-  
-![Screenshot 1](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.28.38.png)
-
-* Cart Drawer
-
-![Screenshot 2](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.09.png)
-
-*  Checkout
-
-![Screenshot 3](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.33.png)
-
-* Recipt Model
-
-![Screenshot 4](https://github.com/vendotha/mock-ecom-cart/blob/main/Screenshot%202025-11-07%20at%2012.29.46.png)
+### Frontend
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **HTTP Client:** Fetch API
+- **State Management:** React Hooks
 
 ---
 
+## 🎯 Key Learnings
+
+This project demonstrates:
+
+- **RESTful API Design** — Proper endpoint structure and HTTP methods
+- **Database Persistence** — SQLite integration for data storage
+- **State Management** — React hooks for cart state
+- **Optimistic UI** — Instant feedback before server confirmation
+- **Error Handling** — Graceful degradation and user feedback
+- **Responsive Design** — Mobile-first CSS approach
+- **External APIs** — Third-party service integration
 
 ---
 
-# ✅ Final Notes
+## 🚦 Development Roadmap
 
-* Full implementation of required features.
-* Both bonus tasks completed.
-* Clean and responsive UI.
-* API + UI paths thoroughly tested.
+- [ ] User authentication system
+- [ ] Payment gateway integration (Stripe)
+- [ ] Product search & filters
+- [ ] Order history tracking
+- [ ] Admin dashboard
+- [ ] Wishlist functionality
+- [ ] Product reviews & ratings
 
-This submission demonstrates full-stack development, modern UI design, state management, external API integration, and database persistence.
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See `LICENSE` file for details.
+
+---
+
+## 👤 Author
+
+**Bhuvan Vendotha**
+
+- GitHub: [@vendotha](https://github.com/vendotha)
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if you find it helpful!**
+
+Made with ❤️ and ☕
+
+</div>
