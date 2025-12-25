@@ -192,12 +192,6 @@ Open: `http://localhost:5173`
 
 ---
 
-# 🎥 Demo Video
-
-
-
-[Walk through Video](https://youtu.be/qYWUzv7Hffo)
-
 
 ---
 
